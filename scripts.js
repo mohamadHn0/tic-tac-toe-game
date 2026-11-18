@@ -1,4 +1,4 @@
-// 1. Gameboard Module (IIFE) - Manages the board state
+
 const Gameboard = (() => {
   let board = ["", "", "", "", "", "", "", "", ""];
 
@@ -19,12 +19,12 @@ const Gameboard = (() => {
   return { getBoard, placeMark, reset };
 })();
 
-// 2. Player Factory - Creates player objects
+
 const createPlayer = (name, marker) => {
   return { name, marker };
 };
 
-// 3. GameController Module (IIFE) - Controls game flow and win/tie rules
+
 const GameController = (() => {
   let players = [];
   let activePlayerIndex = 0;
@@ -102,7 +102,7 @@ const GameController = (() => {
   return { startGame, playRound, getStatusMessage, isGameOver };
 })();
 
-// 4. DisplayController Module (IIFE) - Handles DOM rendering and events
+
 const DisplayController = (() => {
   const boardElement = document.getElementById("gameboard");
   const statusElement = document.getElementById("status-message");
